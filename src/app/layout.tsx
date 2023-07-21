@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import { Nanum_Gothic } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const gothic = Nanum_Gothic({ weight: '800', subsets: ['latin'] });
+const gothic800 = Nanum_Gothic({ weight: '800', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Kyusik`s Blog',
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${inter.className} mx-12`}>
         <header className='flex justify-between my-5'>
-          <Link className={`${gothic.className} text-2xl`} href='/'>
+          <Link className={`${gothic800.className} text-2xl`} href='/'>
             Kyusik`s Blog
           </Link>
           <nav className='flex items-center'>
