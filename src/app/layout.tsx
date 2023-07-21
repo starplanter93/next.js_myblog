@@ -40,7 +40,7 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className='flex justify-center bg-slate-900'>
+        <footer className='flex justify-center bg-slate-900 text-white'>
           All Right Reserved.
         </footer>
       </body>
