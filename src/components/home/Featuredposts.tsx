@@ -1,5 +1,5 @@
 import React from 'react';
-import posts from '../../../public/data/posts.json';
+import posts from '../../../data/posts.json';
 import Link from 'next/link';
 import Image from 'next/image';
 
