@@ -15,7 +15,7 @@ function Featuredposts() {
         {featuredPosts.map(
           ({ title, description, category, date, path }, index) => (
             <li
-              className='border border-solid border-inherit rounded-md shadow-md hover:shadow-lg'
+              className='bg-white border border-solid border-inherit rounded-md shadow-md hover:shadow-lg'
               key={index}
             >
               <Link

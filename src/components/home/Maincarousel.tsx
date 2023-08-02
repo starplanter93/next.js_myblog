@@ -18,6 +18,7 @@ function MainCarousel() {
     },
     desktop: {
       breakpoint: { max: 3000, min: 800 },
+      //centermode일때에는 items의 수를 조절하는 것으로 item간 간격을 조절할 수 있음
       items: 4,
       // partialVisibilityGutter: 100,
     },
@@ -45,8 +46,8 @@ function MainCarousel() {
       >
         {unfeaturedPosts.map(
           ({ title, description, category, date, path }, index) => (
-            <li
-              className='w-11/12 border border-solid border-inherit rounded-md shadow-md hover:shadow-lg'
+            <div
+              className='w-11/12 bg-white border border-solid border-inherit rounded-md shadow-md hover:shadow-lg'
               key={index}
             >
               <Link
@@ -69,7 +70,7 @@ function MainCarousel() {
                   {category}
                 </div>
               </Link>
-            </li>
+            </div>
           )
         )}
       </Carousel>
