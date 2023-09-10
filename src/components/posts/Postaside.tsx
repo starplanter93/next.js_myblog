@@ -2,17 +2,35 @@
 import React from 'react';
 import posts from '../../../data/posts.json';
 
-function Postaside() {
+interface Ownprops {
+  categoryHandler: (category: string) => void;
+}
+
+function Postaside({ categoryHandler }: Ownprops) {
   const categories = posts.map((post) => post.category);
   const set = new Set(categories);
   const uniqueCategories = [...set];
+
   return (
     <aside>
       <div>Category</div>
       <ul>
-        <li>All Posts</li>
+        <li
+          onClick={(e) => {
+            categoryHandler(e.currentTarget.innerHTML);
+          }}
+        >
+          All Posts
+        </li>
         {uniqueCategories.map((category, index) => (
-          <li key={index}>{category}</li>
+          <li
+            key={index}
+            onClick={(e) => {
+              categoryHandler(e.currentTarget.innerHTML);
+            }}
+          >
+            {category}
+          </li>
         ))}
       </ul>
     </aside>
