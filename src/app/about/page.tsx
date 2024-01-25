@@ -2,7 +2,7 @@ import Aboutme from '@/components/about/Aboutme';
 import Myprofile from '@/components/home/Myprofile';
 import React from 'react';
 
-function about() {
+export default function AboutPage() {
   return (
     <div className='flex flex-col h-screen'>
       <Myprofile />
@@ -10,5 +10,3 @@ function about() {
     </div>
   );
 }
-
-export default about;

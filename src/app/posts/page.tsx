@@ -3,7 +3,7 @@ import Postaside from '@/components/posts/Postaside';
 import Postbody from '@/components/posts/Postbody';
 import React, { useState } from 'react';
 
-function Posts() {
+export default function PostsPage() {
   const [category, setCategory] = useState<string>('All Posts');
 
   const categoryHandler = (category: string) => {
@@ -22,5 +22,3 @@ function Posts() {
     </div>
   );
 }
-
-export default Posts;
