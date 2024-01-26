@@ -5,36 +5,30 @@ import { useRouter } from 'next/navigation';
 import mainProfile from '../../../public/images/main_profile.png';
 import { Nanum_Gothic } from 'next/font/google';
 
-const gothic800 = Nanum_Gothic({ weight: '800', subsets: ['latin'] });
-const gothic700 = Nanum_Gothic({ weight: '700', subsets: ['latin'] });
-
 function Myprofile() {
   const router = useRouter();
   return (
-    <div className='flex flex-col items-center'>
+    <section className='text-center'>
       <Image
-        className='rounded-full my-2'
+        className='rounded-full mx-auto'
         src={mainProfile}
-        alt='mainProfile'
+        alt='main-profile'
         height={250}
         width={250}
+        priority
       />
-      <h1 className={`${gothic800.className} text-2xl my-0.5`}>
-        Hi, I&apos;m Kyusik
-      </h1>
-      <h3 className={`${gothic700.className} text-xl my-0.5`}>
-        Frontend engineer
-      </h3>
-      <div>프론트엔드 개발자 정규식입니다.</div>
+      <h2 className={'text-3xl font-bold mt-2'}>{"Hi, I'm Kyusik"}</h2>
+      <h3 className={' text-xl font-semibold'}>Frontend Engineer</h3>
+      <p>프론트엔드 개발자 정규식입니다.</p>
       <button
-        className={`${gothic800.className} text-black bg-amber-500 rounded-lg my-2 px-2 py-0.5`}
+        className={'font-bold bg-yellow-500 rounded-xl mt-2 px-4 py-1'}
         onClick={() => {
           router.push('/contact');
         }}
       >
         Contact Me
       </button>
-    </div>
+    </section>
   );
 }
 
