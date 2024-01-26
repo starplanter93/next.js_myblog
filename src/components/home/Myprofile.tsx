@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import mainProfile from '../../../public/images/main_profile.png';
 import { Nanum_Gothic } from 'next/font/google';
 
-function Myprofile() {
+export default function Myprofile() {
   const router = useRouter();
   return (
     <section className='text-center'>
@@ -31,5 +31,3 @@ function Myprofile() {
     </section>
   );
 }
-
-export default Myprofile;
