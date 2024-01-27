@@ -1,16 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Nanum_Gothic } from 'next/font/google';
 import PostsGrid from './PostsGrid';
+import { getFeaturedPosts } from '@/api/posts';
 
-const gothic800 = Nanum_Gothic({ weight: '800', subsets: ['latin'] });
-
-export default function FeaturedPosts() {
+export default async function FeaturedPosts() {
+  const posts = await getFeaturedPosts();
   return (
     <section>
-      <h2 className={`${gothic800.className} text-lg my-4`}>Featured Posts</h2>
-      <PostsGrid />
+      <h2 className='text-2xl font-bold my-2'>Featured Posts</h2>
+      <PostsGrid posts={posts} />
     </section>
   );
 }

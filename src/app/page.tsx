@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Myprofile from '../components/home/Myprofile';
 import FeaturedPosts from '@/components/home/FeaturedPosts';
 import Maincarousel from '../components/home/Maincarousel';
