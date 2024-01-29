@@ -1,24 +1,9 @@
-'use client';
-import Postaside from '@/components/posts/Postaside';
-import Postbody from '@/components/posts/Postbody';
-import React, { useState } from 'react';
+import { getAllPosts } from '@/api/posts';
+import FilterablePosts from '@/components/posts/FilterablePosts';
 
-export default function PostsPage() {
-  const [category, setCategory] = useState<string>('All Posts');
+export default async function PostsPage() {
+  const posts = await getAllPosts();
+  const categories = [...new Set(posts.map((post) => post.category))];
 
-  const categoryHandler = (category: string) => {
-    setCategory((prev: string) => {
-      if (prev === category) {
-        return 'All Posts';
-      }
-      return category;
-    });
-  };
-
-  return (
-    <div className='flex'>
-      <Postbody selectedCategory={category} />
-      <Postaside categoryHandler={categoryHandler} />
-    </div>
-  );
+  return <FilterablePosts posts={posts} categories={categories} />;
 }
