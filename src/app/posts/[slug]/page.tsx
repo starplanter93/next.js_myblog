@@ -1,5 +1,6 @@
 import { getPostData } from '@/api/posts';
-import PostContent from '@/components/posts/PostContent';
+import AdjacentPostCard from '@/components/post/AdjacentPostCard';
+import PostContent from '@/components/post/PostContent';
 import Image from 'next/image';
 
 interface Ownprops {
@@ -10,7 +11,7 @@ interface Ownprops {
 
 export default async function PostPage({ params: { slug } }: Ownprops) {
   const post = await getPostData(slug);
-  const { path, title } = post;
+  const { path, title, next, prev } = post;
 
   return (
     <article className='rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4'>
@@ -22,6 +23,10 @@ export default async function PostPage({ params: { slug } }: Ownprops) {
         height={420}
       />
       <PostContent post={post} />
+      <section className='flex shadow-md'>
+        {prev && <AdjacentPostCard post={prev} type='prev' />}
+        {next && <AdjacentPostCard post={next} type='next' />}
+      </section>
     </article>
   );
 }

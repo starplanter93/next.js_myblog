@@ -2,7 +2,7 @@
 import { ALL_POSTS } from '@/constant/constant';
 import { Post } from '@/types/types';
 import { useState } from 'react';
-import PostsGrid from '../home/PostsGrid';
+import PostsGrid from '../PostsGrid';
 import Categories from './Categories';
 
 interface Ownprops {

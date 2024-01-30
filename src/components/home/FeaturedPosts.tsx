@@ -1,4 +1,4 @@
-import PostsGrid from './PostsGrid';
+import PostsGrid from '../PostsGrid';
 import { getFeaturedPosts } from '@/api/posts';
 
 export default async function FeaturedPosts() {

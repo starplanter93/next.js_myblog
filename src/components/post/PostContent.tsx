@@ -7,7 +7,7 @@ interface Ownprops {
 }
 
 export default function PostContent({ post }: Ownprops) {
-  const { category, content, date, description, featured, path, title } = post;
+  const { content, date, description, title } = post;
   return (
     <section className='flex flex-col p-4'>
       <div className='flex items-center self-end text-sky-600'>

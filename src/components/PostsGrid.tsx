@@ -1,5 +1,5 @@
 import { Post } from '@/types/types';
-import PostCard from '../PostCard';
+import PostCard from './PostCard';
 
 interface Ownprops {
   posts: Post[];
