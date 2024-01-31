@@ -1,25 +1,27 @@
-import React from 'react';
-import { Nanum_Gothic } from 'next/font/google';
+const TITLE_CLASS = 'text-2xl font-bold tet-gray-800 my-2';
 
-const gothic800 = Nanum_Gothic({ weight: '800', subsets: ['latin'] });
-
-function Aboutme() {
+export default function Aboutme() {
   return (
-    <div className='my-8 flex flex-col justify-center place-self-center w-11/12 h-full bg-slate-300 p-8 rounded-lg'>
-      <h2 className={`flex justify-center mb-2 ${gothic800.className}`}>
-        Who am I?
-      </h2>
-      <div className='flex justify-center mb-8'>프론트엔드 개발자 정규식</div>
-      <h2 className={`flex justify-center mb-2 ${gothic800.className}`}>
-        Career
-      </h2>
-      <div className='flex justify-center mb-8'>-</div>
-      <h2 className={`flex justify-center mb-4 ${gothic800.className}`}>
-        Skills
-      </h2>
-      <div className='flex justify-center mb-8'>React, Git, Typescript</div>
-    </div>
+    <section className='bg-gray-100 shadow-lg p-8 m-8 text-center'>
+      <h2 className={TITLE_CLASS}>Who am I?</h2>
+      <p>
+        프론트엔드 개발자 정규식
+        <br />
+      </p>
+      <h2 className={TITLE_CLASS}>Career</h2>
+      <p>아틀라스 네트웍스 2023.09 ~</p>
+      <h2 className={TITLE_CLASS}>Skills</h2>
+      <p>
+        Typescript, Javascript
+        <br />
+        React.js, Next.js
+        <br />
+        Redux, Recoil, React Query
+        <br />
+        Styled Components, TailwindCSS, SCSS, MUI
+        <br />
+        Git, Github Action
+      </p>
+    </section>
   );
 }
-
-export default Aboutme;
