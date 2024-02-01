@@ -18,3 +18,8 @@ export interface Form {
   subject: string;
   message: string;
 }
+
+export interface BannerData {
+  message: string;
+  state: 'success' | 'error';
+}
