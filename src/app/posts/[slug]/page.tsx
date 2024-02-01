@@ -1,4 +1,4 @@
-import { getPostData } from '@/api/posts';
+import { getPostData } from '@/service/posts';
 import AdjacentPostCard from '@/components/post/AdjacentPostCard';
 import PostContent from '@/components/post/PostContent';
 import Image from 'next/image';

@@ -23,3 +23,9 @@ export interface BannerData {
   message: string;
   state: 'success' | 'error';
 }
+
+export interface EmailData {
+  from: string;
+  subject: string;
+  message: string;
+}

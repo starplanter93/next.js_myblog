@@ -1,4 +1,4 @@
-import { getNonFeaturedPosts } from '@/api/posts';
+import { getNonFeaturedPosts } from '@/service/posts';
 import PostCard from '../PostCard';
 import MultiCarousel from './MultiCarousel';
 

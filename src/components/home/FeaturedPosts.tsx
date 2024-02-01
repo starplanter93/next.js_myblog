@@ -1,5 +1,5 @@
 import PostsGrid from '../PostsGrid';
-import { getFeaturedPosts } from '@/api/posts';
+import { getFeaturedPosts } from '@/service/posts';
 
 export default async function FeaturedPosts() {
   const posts = await getFeaturedPosts();
