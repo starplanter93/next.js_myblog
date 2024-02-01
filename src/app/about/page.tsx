@@ -1,6 +1,5 @@
 import Aboutme from '@/components/about/Aboutme';
-import Myprofile from '@/components/home/Myprofile';
-import React from 'react';
+import Myprofile from '@/components/Myprofile';
 
 export default function AboutPage() {
   return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import mainProfile from '../../../public/images/main_profile.png';
+import mainProfile from '/public/images/main_profile.png';
 
 export default function Myprofile() {
   const router = useRouter();
