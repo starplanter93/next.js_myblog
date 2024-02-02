@@ -1,3 +1,4 @@
+import React from 'react';
 import { getPostData } from '@/service/posts';
 import AdjacentPostCard from '@/components/post/AdjacentPostCard';
 import PostContent from '@/components/post/PostContent';
@@ -10,11 +11,10 @@ interface Ownprops {
   };
 }
 
-export async function generateMetaData({
+export async function generateMetadata({
   params: { slug }
 }: Ownprops): Promise<Metadata> {
   const { title, description } = await getPostData(slug);
-  console.log(title, description);
 
   return {
     title,
