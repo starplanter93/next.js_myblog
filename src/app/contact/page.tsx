@@ -1,4 +1,5 @@
 import ContactForm from '@/components/contact/ContactForm';
+import { Metadata } from 'next';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { SiVelog } from 'react-icons/si';
 
@@ -10,6 +11,11 @@ const LINKS = [
     url: 'https://www.linkedin.com/in/kyusik-jeong-52183a25a/'
   }
 ];
+
+export const metadata: Metadata = {
+  title: 'Contact Me',
+  description: '규식에게 메일 보내기'
+};
 
 export default function ContactPage() {
   return (

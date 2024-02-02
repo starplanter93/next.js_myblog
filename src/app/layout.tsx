@@ -7,12 +7,15 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Kyusik`s Blog',
-  description: 'Frontend developer Kyusik`s Blog',
+  title: { default: '규식 블로그', template: '규식 블로그 | %s' },
+  description: '프론트엔드 개발자 규식의 블로그',
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

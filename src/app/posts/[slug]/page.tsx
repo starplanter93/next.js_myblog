@@ -2,10 +2,23 @@ import { getPostData } from '@/service/posts';
 import AdjacentPostCard from '@/components/post/AdjacentPostCard';
 import PostContent from '@/components/post/PostContent';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 interface Ownprops {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetaData({
+  params: { slug }
+}: Ownprops): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  console.log(title, description);
+
+  return {
+    title,
+    description
   };
 }
 
