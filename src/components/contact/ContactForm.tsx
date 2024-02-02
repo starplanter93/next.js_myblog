@@ -3,7 +3,7 @@ import { INIT_FORM } from '@/constant/constant';
 import { BannerData, Form } from '@/types/types';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import Banner from '../Banner';
-import { sendEmail } from '@/service/contact';
+import { sendContactEmail } from '@/service/contact';
 
 export default function ContactForm() {
   const [form, setForm] = useState<Form>(INIT_FORM);
@@ -15,7 +15,7 @@ export default function ContactForm() {
   };
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    sendEmail(form)
+    sendContactEmail(form)
       .then(() => {
         setBanner({
           message: '메일을 성공적으로 전송했습니다.',
