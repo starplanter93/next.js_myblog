@@ -1,5 +1,5 @@
 import React from 'react';
-import { getPostData } from '@/service/posts';
+import { getFeaturedPosts, getPostData } from '@/service/posts';
 import AdjacentPostCard from '@/components/post/AdjacentPostCard';
 import PostContent from '@/components/post/PostContent';
 import Image from 'next/image';
@@ -12,13 +12,13 @@ interface Ownprops {
 }
 
 export async function generateMetadata({
-  params: { slug }
+  params: { slug },
 }: Ownprops): Promise<Metadata> {
   const { title, description } = await getPostData(slug);
 
   return {
     title,
-    description
+    description,
   };
 }
 
@@ -42,4 +42,9 @@ export default async function PostPage({ params: { slug } }: Ownprops) {
       </section>
     </article>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map((post) => ({ slug: post.path }));
 }
